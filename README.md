@@ -12,7 +12,7 @@ This will work in the trial version of Spad.Next if you want to see if you can g
 Backup
 - in Spad.Next, go to the MCP2A config page
 -   Click on the arrow next to Edit Event
--   Choose copy, then complete device
+-   Choose Copy, then "complete device"
 -   Open notepad
 -   Paste the text and save.    This is your backup if this doesn't work for you
 
