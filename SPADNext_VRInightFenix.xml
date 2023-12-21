@@ -1,0 +1,1627 @@
+<Device xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VendorID="0xFFFF" ProductID="0x0004" DevicePath="SERIAL_COM4" DeviceIndex="0" Version="3" xmlns="http://www.fsgs.com/SPAD">
+  <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
+    <Events>
+      <Event BoundTo="E_EFINDM">
+        <EventDefinitions>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_ND_MODE" Value="1" ValueOperation="Increment">
+                <Options>
+                  <Option Key="HASMINMAX" Value="True" />
+                  <Option Key="VALUEMAX" Value="4" />
+                </Options>
+              </EventActionChangeValue>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_ND_MODE" Value="1" ValueOperation="Decrement">
+                <Options>
+                  <Option Key="HASMINMAX" Value="True" />
+                  <Option Key="VALUEMAX" Value="4" />
+                </Options>
+              </EventActionChangeValue>
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="E_EFINDR">
+        <EventDefinitions>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_ND_ZOOM" Value="1" ValueOperation="Increment">
+                <Options>
+                  <Option Key="HASMINMAX" Value="True" />
+                  <Option Key="VALUEMAX" Value="5" />
+                </Options>
+              </EventActionChangeValue>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_ND_ZOOM" Value="1" ValueOperation="Decrement">
+                <Options>
+                  <Option Key="HASMINMAX" Value="True" />
+                  <Option Key="VALUEMAX" Value="5" />
+                </Options>
+              </EventActionChangeValue>
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIILS">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_LS" Value="2" ValueOperation="Increment" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS2_LS" Value="2" ValueOperation="Increment" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_MIP_ISFD_LS" Value="2" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFICSTR">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_CSTR" Value="2" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIWPT">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_WPT" Value="2" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIVORD">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_VORD" Value="2" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFINDB">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NDB" Value="2" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIARPT">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_ARPT" Value="2" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="E_EFIBAR">
+        <EventDefinitions>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_EFIS1_BARO" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_EFIS1_BARO" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_EFIS1_BARO" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_EFIS1_BARO" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_BARO_STD" Value="2" ValueOperation="Increment">
+                <Options>
+                  <Option Key="HASMINMAX" Value="True" />
+                  <Option Key="VALUEMAX" Value="2" />
+                  <Option Key="ROLLOVER" Value="True" />
+                </Options>
+              </EventActionChangeValue>
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIINHG">
+        <EventDefinitions>
+          <EventDefinition Trigger="POSITION_HPA_SET">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_BARO_MODE" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="POSITION_INHG_SET">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_BARO_MODE" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIADF1">
+        <EventDefinitions>
+          <EventDefinition Trigger="POSITION_ADF_ON">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV1" Value="0" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="POSITION_ADF_OFF">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV1" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="POSITION_VOR_ON">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV1" Value="2" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="POSITION_VOR_OFF">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV1" Value="1" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIADF2">
+        <EventDefinitions>
+          <EventDefinition Trigger="POSITION_ADF_ON">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV2" Value="0" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="POSITION_ADF_OFF">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV2" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="POSITION_VOR_ON">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV2" Value="2" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="POSITION_VOR_OFF">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_NAV2" Value="1" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUSPD">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_SPEED" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUMACH">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_SPD_MACH" Value="2" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="E_FCUHDG">
+        <EventDefinitions>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_HEADING" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_HEADING" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_HEADING" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_HEADING" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_HEADING" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUHDG">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_HEADING" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUATHR">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_ATHR" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                  <Option Key="VALUEMAX" Value="1" />
+                  <Option Key="ROLLOVER" Value="True" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionDelay Delay="406" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_ATHR" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCULOC">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_LOC" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                  <Option Key="VALUEMAX" Value="1" />
+                  <Option Key="ROLLOVER" Value="True" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionDelay Delay="406" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_LOC" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUAP1">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_AP1" Value="1" />
+              <EventActionDelay Delay="400" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_AP1" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUAP2">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_AP2" Value="1" />
+              <EventActionDelay Delay="400" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_AP2" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUTRK">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_HDGVS_TRKFPA" Value="1" />
+              <EventActionDelay Delay="400" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_HDGVS_TRKFPA" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_EFIFD">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_FD" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                  <Option Key="VALUEMAX" Value="2" />
+                  <Option Key="ROLLOVER" Value="True" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionDelay Delay="400" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS1_FD" Value="0" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS2_FD" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                  <Option Key="VALUEMAX" Value="2" />
+                  <Option Key="ROLLOVER" Value="True" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionDelay Delay="400" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EFIS2_FD" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="E_FCUSPD">
+        <EventDefinitions>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_SPEED" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_SPEED" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_SPEED" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_SPEED" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_SPEED" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUEXPD">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EXPED" Value="1" />
+              <EventActionDelay Delay="200" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_EXPED" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUAPR">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_APPR" Value="1" />
+              <EventActionDelay Delay="200" />
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_APPR" Value="0" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="E_FCUALT">
+        <EventDefinitions>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_ALTITUDE" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_ALTITUDE" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_ALTITUDE" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_ALTITUDE" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_ALTITUDE" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUALT">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_ALTITUDE" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUMTR">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_ALTITUDE_SCALE" Value="1" ValueOperation="Increment">
+                <Options>
+                  <Option Key="HASMINMAX" Value="True" />
+                  <Option Key="VALUEMAX" Value="1" />
+                  <Option Key="ROLLOVER" Value="True" />
+                </Options>
+              </EventActionChangeValue>
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="E_FCUVVS">
+        <EventDefinitions>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_VS" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_VS" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_VS" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:E_FCU_VS" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_VERTICAL_SPEED" Value="1" ValueOperation="Decrement" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_FCUVVS">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LVAR:S_FCU_VERTICAL_SPEED" Value="1" ValueOperation="Increment" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="D_RADIO">
+        <EventDefinitions>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'COM1:  '+ToString(Format([SIMCONNECT:COM ACTIVE FREQUENCY:1],'0.000'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'COM2:  '+ToString(Format([SIMCONNECT:COM ACTIVE FREQUENCY:2],'0.000'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'NAV1:  '+ToString(Format( [SIMCONNECT:NAV ACTIVE FREQUENCY:1],'0.00'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'NAV2:  '+ToString(Format( [SIMCONNECT:NAV ACTIVE FREQUENCY:2],'0.00'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'ADF1:  ' + ToString(Format( [SIMCONNECT:ADF ACTIVE FREQUENCY:1] ,0000))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'CRS1 '+ToString( [SIMCONNECT:NAV OBS:1] )" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'CRS2 '+ToString( [SIMCONNECT:NAV OBS:2] )" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="Transponder" DisplayType="Static" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'stby:  '+ ToString(Format([SIMCONNECT:COM STANDBY FREQUENCY:1],'0.000'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'stby:  '+ ToString(Format([SIMCONNECT:COM STANDBY FREQUENCY:2],'0.000'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'stby:  '+ ToString(Format( [SIMCONNECT:NAV STANDBY FREQUENCY:1] ,'0.00'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'stby:  '+ ToString(Format( [SIMCONNECT:NAV STANDBY FREQUENCY:2] ,'0.00'))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'stby:  ' + ToString(Format( [SIMCONNECT:ADF STANDBY FREQUENCY:1] ,0000))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="000.0nm   000kts" DisplayType="Static" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="000.0nm   000kts" DisplayType="Static" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RADIO_ROW_2">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="'   '+ToString([LOCAL:TC1DIGIT1] ) + '  ' + ToString ( [LOCAL:TC1DIGIT2] ) + '  ' + ToString( [LOCAL:TC1DIGIT3]) + '  ' + ToString ( [LOCAL:TC1DIGIT4] ) +'   '" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="E_RADFRE">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for COM (1-2)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="2" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for COM (2-1)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for NAV (1-2)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="2" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for NAV (2-1)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for ADF (1-2)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="2" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for ADF (2-3)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="3" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="3" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for ADF (3-1)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for DME (1-2)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="2" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for DME (2-1)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for Transponder (1-2)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="2" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for Transponder (2-3)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="3" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="3" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for Transponder (3-4)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="4" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="4" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+              <EventCondition ConditionComparator="GreaterOrEqual" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+            </EventConditions>
+            <Comment>Toggle digit position for Transponder (4-1)</Comment>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_WHOLE_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_WHOLE_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_FRACT_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_FRACT_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:ADF_100_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:ADF_100_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:ADF_10_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:ADF_10_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="3" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:ADF_1_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="3" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:ADF_1_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR1_OBI_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR1_OBI_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR1_OBI_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR1_OBI_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR2_OBI_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR2_OBI_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR2_OBI_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR1_OBI_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE_FAST">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:VOR2_OBI_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_1000_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_1000_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_100_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_100_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="3" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_10_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="3" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_10_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_CLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="4" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_1_INC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="4" ConditionValueSource="LOCAL:DIGIT_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:XPNDR_1_DEC">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_RADCOM">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS" IsFinal="true" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="LOCAL:COM_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:COM_TRACKER" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:NAV_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:ADF_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DME_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:TRN_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:COM_TRACKER" Value="2" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_RADNAV">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS" IsFinal="true" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="LOCAL:NAV_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:NAV_TRACKER" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:COM_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:ADF_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DME_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:TRN_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:NAV_TRACKER" Value="2" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_RADADF">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS" IsFinal="true" ConditionBinding="OR">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:ADF_TRACKER" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:COM_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:NAV_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DME_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:TRN_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_RADDME">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS" IsFinal="true" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="LOCAL:DME_TRACKER" />
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DME_TRACKER" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:COM_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:NAV_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:ADF_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:TRN_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" IsFinal="true">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:DME_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DME_TRACKER" Value="2" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_RADTRAN">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS" IsFinal="true" ConditionBinding="OR">
+            <EventActions>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:TRN_TRACKER" Value="1">
+                <Options>
+                  <Option Key="HASMINMAX" Value="False" />
+                </Options>
+              </EventActionChangeValue>
+              <EventActionChangeValue TargetDataDefinition="LOCAL:COM_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:NAV_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:ADF_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DME_TRACKER" Value="0" />
+              <EventActionChangeValue TargetDataDefinition="LOCAL:DIGIT_TRACKER" Value="1" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_RADTFR">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM_STBY_RADIO_SWAP">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:COM_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RADIO_SWAP">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV1_RADIO_SWAP">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="2" ConditionValueSource="LOCAL:NAV_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:NAV2_RADIO_SWAP">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="PRESS" ConditionBinding="OR">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:ADF_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="SIMCONNECT:ADF1_RADIO_SWAP">
+                <Parameter Value="1" />
+              </EventActionControl>
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="I_RADAUX">
+        <EventDefinitions>
+          <EventDefinition Trigger="PRESS">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LOCAL:TRN_TRACKER" />
+            </EventConditions>
+            <EventActions>
+              <EventActionControl TargetDataDefinition="MSFS:TRANSPONDERALT" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="D_RIGHT">
+        <EventDefinitions>
+          <EventDefinition Trigger="D_RIGHT_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="LVAR:I_FCU_TRACK_FPA_MODE" />
+            </EventConditions>
+            <Comment>Vertical Speed mode</Comment>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="If([LVAR:I_FCU_ALTITUDE_MANAGED] == 1 and [LVAR:FNX2PLD_fcuVsDashed] == 1, format ([LVAR:FNX2PLD_fcuAlt], '00000*') + '    ----- ', &#xD;&#xA;If([LVAR:I_FCU_ALTITUDE_MANAGED] == 0 and [LVAR:FNX2PLD_fcuVsDashed] == 1, format ([LVAR:FNX2PLD_fcuAlt], '00000 ') + '    ----- ', &#xD;&#xA;If([LVAR:I_FCU_ALTITUDE_MANAGED] == 1 and [LVAR:FNX2PLD_fcuVsDashed] == 0, format ([LVAR:FNX2PLD_fcuAlt], '00000*    ') + format ([LVAR:FNX2PLD_fcuVs], '+0000;-0000') , &#xD;&#xA;format ([LVAR:FNX2PLD_fcuAlt], '00000     ') + format ([LVAR:FNX2PLD_fcuVs], '+0000;-0000')  )))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RIGHT_ROW_1">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LVAR:I_FCU_TRACK_FPA_MODE" />
+            </EventConditions>
+            <Comment>Flight Path angle mode</Comment>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="If([LVAR:I_FCU_ALTITUDE_MANAGED] == 1 and [LVAR:FNX2PLD_fcuVsDashed] == 1, format ([LVAR:FNX2PLD_fcuAlt], '00000*') + '    --.--', &#xD;&#xA;If([LVAR:I_FCU_ALTITUDE_MANAGED] == 0 and [LVAR:FNX2PLD_fcuVsDashed] == 1, format ([LVAR:FNX2PLD_fcuAlt], '00000 ') + '    --.--', &#xD;&#xA;If([LVAR:I_FCU_ALTITUDE_MANAGED] == 1 and [LVAR:FNX2PLD_fcuVsDashed] == 0, format ([LVAR:FNX2PLD_fcuAlt], '00000*    ') + format ([LVAR:FNX2PLD_fcuVs], '+0.0;-0.0') , &#xD;&#xA;format ([LVAR:FNX2PLD_fcuAlt], '00000     ') + format ([LVAR:FNX2PLD_fcuVs], '+0.0;-0.0')  )))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_RIGHT_ROW_1">
+            <Comment>Top labels (ALT FPA/VS)</Comment>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="ALT" DisplayType="Static" />
+              <EventActionDisplayValue TargetDataDefinition="If([LVAR:I_FCU_TRACK_FPA_MODE] == 1,' FPA', 'V/S ')" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+      <Event BoundTo="D_LEFT">
+        <EventDefinitions>
+          <EventDefinition Trigger="D_LEFT_ROW_2_SEGMENT_4">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="1" ConditionValueSource="LVAR:I_FCU_TRACK_FPA_MODE" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="TRK" DisplayType="Static" />
+              <EventActionDisplayValue TargetDataDefinition="TRK" DisplayType="Static" />
+              <EventActionDisplayValue TargetDataDefinition="SPD" DisplayType="Static" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_LEFT_ROW_2_SEGMENT_4">
+            <EventConditions>
+              <EventCondition ConditionComparator="Equals" ConditionTargetValue="0" ConditionValueSource="LVAR:I_FCU_TRACK_FPA_MODE" />
+            </EventConditions>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="HDG" DisplayType="Static" />
+              <EventActionDisplayValue TargetDataDefinition="HDG" DisplayType="Static" />
+              <EventActionDisplayValue TargetDataDefinition="SPD" DisplayType="Static" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_LEFT_ROW_2_SEGMENT_1">
+            <Comment>Speed</Comment>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="If([LVAR:I_FCU_SPEED_MANAGED] == 1 and [LVAR:FNX2PLD_fcuSpdDashed] == 1, '---*', &#xD;&#xA;If([LVAR:I_FCU_SPEED_MANAGED] == 0 and [LVAR:FNX2PLD_fcuSpdDashed] == 1, '---', &#xD;&#xA;If([LVAR:I_FCU_SPEED_MANAGED] == 1 and [LVAR:FNX2PLD_fcuSpdDashed] == 0, format([LVAR:FNX2PLD_fcuSpd], '000*' ), &#xD;&#xA;format([LVAR:FNX2PLD_fcuSpd], '000 ' ))))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+          <EventDefinition Trigger="D_LEFT_ROW_2_SEGMENT_3">
+            <Comment>Heading</Comment>
+            <EventActions>
+              <EventActionDisplayValue TargetDataDefinition="If([LVAR:I_FCU_HEADING_MANAGED] == 1 and [LVAR:FNX2PLD_fcuHdgDashed] == 1, '---*', &#xD;&#xA;If([LVAR:I_FCU_HEADING_MANAGED] == 0 and [LVAR:FNX2PLD_fcuHdgDashed] == 1, '---', &#xD;&#xA;If([LVAR:I_FCU_HEADING_MANAGED] == 1 and [LVAR:FNX2PLD_fcuHdgDashed] == 0, format( [LVAR:FNX2PLD_fcuHdg], '000*' ), &#xD;&#xA;If([LVAR:I_FCU_HEADING_MANAGED] == 0 and [LVAR:FNX2PLD_fcuHdgDashed] == 0, format( [LVAR:FNX2PLD_fcuHdg], '000' ), ''))))" DisplayType="Exp" />
+            </EventActions>
+          </EventDefinition>
+        </EventDefinitions>
+      </Event>
+    </Events>
+    <Extensions />
+  </DevicePage>
+  <Events />
+  <Extensions />
+</Device>
