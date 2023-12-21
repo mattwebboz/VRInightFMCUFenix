@@ -10,11 +10,10 @@ To use:
 
 Backup
 - in Spad.Next, go to the MCP2A config page
-  -   Click on the arrow next to Edit Event
-  -   Choose copy, then complete device
-  -   Open notepad
-  -   Paste the text and save.    This is your backup if this doesn't work for you
-  -  
+-   Click on the arrow next to Edit Event
+-   Choose copy, then complete device
+-   Open notepad
+-   Paste the text and save.    This is your backup if this doesn't work for you
 
 New config
   -   Open the the raw config in this project -> https://raw.githubusercontent.com/mattwebboz/VRInightFMCUFenix/main/SPADNext_VRInightFenix.xml
