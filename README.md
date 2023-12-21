@@ -1,6 +1,6 @@
 ************* Use at your own risk!   Make backups of your existing configuration   **************************
 
-This is work in progress of a working VRInfight MCP (Airbus) with Fenix using FenixQuarz and Spad.Next.    The speed, heading, altitude and virtible speed was written from scratch.   The radio /nav section was imported from an existing profile.
+This is work in progress of a working VRInfight MCP (Airbus) with Fenix using FenixQuarz and Spad.Next, including support for FPA.    The speed, heading, altitude and vertical speed was written from scratch.   The radio /nav section was imported from an existing profile.
 
 This will work in the trial version of Spad.Next if you want to see if you can get it working.
 
